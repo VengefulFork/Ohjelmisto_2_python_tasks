@@ -46,8 +46,7 @@ def kilpailu ():
             if c.kuljettu_matka >= 10000 :
                 lippu = False
     for c in autot :
-        print(
-            f"Auton rekisteritunnus {c.rekisteritunnus}, tämän hetkinen nopeus {c.tämän_hetkinen_nopeus} km/h, kuljettu matka {c.kuljettu_matka} km.")
+        print(f"Auton rekisteritunnus {c.rekisteritunnus}, tämän hetkinen nopeus {c.tämän_hetkinen_nopeus} km/h, kuljettu matka {c.kuljettu_matka} km.")
 
 
     return
