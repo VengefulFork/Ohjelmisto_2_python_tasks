@@ -42,6 +42,7 @@ class Talo () :
         self.talon_ylin_kerros = talon_ylin_kerros
         self.hissien_määrä = hissien_määrä
         self.hissit = []
+        self.hissien_luonti()
     def hissien_luonti(self):
         b = 0
         for a in range(self.hissien_määrä) :
@@ -64,7 +65,7 @@ class Talo () :
 
 
 t = Talo(1, 10, 5)
-t.hissien_luonti()
+
 t.talo_hissien_siirtäminen(5, 9)
 t.talo_hissien_siirtäminen(2, 5)
 t.hälytys()
