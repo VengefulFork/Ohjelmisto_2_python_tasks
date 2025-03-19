@@ -1,7 +1,6 @@
 import random
 class Auto :
-    rekisteritunnus = str
-    huippunopeus = int
+
     tämän_hetkinen_nopeus = 0
     kuljettu_matka = 0
     def __init__(self, rekisteritunnus, huippunopeus):
