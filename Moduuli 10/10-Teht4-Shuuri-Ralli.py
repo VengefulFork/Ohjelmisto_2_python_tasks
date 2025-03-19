@@ -36,8 +36,10 @@ class ralli () :
         for a in self.auto_lista :
             if a.kuljettu_matka >= 8000 :
                 flag = True
-
         return flag
+    def tulosta_tillane(self):
+        for c in self.auto_lista :
+            print(f"{c.rekisteritunnus}, huipppunopeus {c.huippunopeus} km/h, tämän hetkinen nopeus {c.tämän_hetkinen_nopeus} km/h, kuljettu matka {c.kuljettu_matka} km.")
 
 
 def kilpailu ():
@@ -47,22 +49,19 @@ def kilpailu ():
         b += 1
         uusi_auto = Auto(f"ABC-{b}", random.randint(100, 200))
         autot.append(uusi_auto)
-    suuri_romuralli = ralli("Suuri romuralli", 8000, autot)
+    s = ralli("Suuri romuralli", 8000, autot)
+    tunnit = 0
+    lippu = True
 
-    # for a in autot:
+    while lippu :
+        print(f"Kisassa kuluneet tunnit : {tunnit}")
+        s.tunti_kuluu()
+        if tunnit % 10 == 0:
+            s.tulosta_tillane()
+        if s.kilpailu_ohi() :
+            lippu = False
+            s.tulosta_tillane()
+        tunnit += 1
 
 
-    #     print(f"Rekisteritunnus {a.rekisteritunnus}, huippunopeus {a.huippunopeus} km/h")
-    # while lippu:
-    #
-    #
-    #     for b in autot :
-    #         b.kiihdytä(random.randrange(-10, 15))
-    #         # print(f"Auton tämän hetkinen nopeus {b.tämän_hetkinen_nopeus} km/h")
-    #         b.kulje(1)
-    #         # print(f"Auton kulkema matka {b.kuljettu_matka}")
-    #
-    #     for c in autot :
-    #
-    #         if c.kuljettu_matka >= 10000 :
-    #             lippu = False
+kilpailu()
