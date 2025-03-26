@@ -25,6 +25,6 @@ a.liiku(3)
 b = Polttomoottori("ACD-123", 165, 32.3)
 b.liiku(3)
 print(f"Auton {a.rekisteritunnus} kulkema matka {a.kuljettu_matka} km")
-print(f"AUton {b.rekisteritunnus} kulkema matka {b.kuljettu_matka} km")
+print(f"Auton {b.rekisteritunnus} kulkema matka {b.kuljettu_matka} km")
 
 
