@@ -6,7 +6,7 @@ from api_key import api_key
 def säätila ():
     loop = True
     while loop :
-        kaupunki = input("Anna kaupungin nimi = ").capitalize()
+        kaupunki = input("Anna kaupungin nimi = ").title()
         haku = f"http://api.openweathermap.org/geo/1.0/direct?q={kaupunki}&limit={1}&appid={api_key}"
         try :
             vastaus = requests.get(haku)
